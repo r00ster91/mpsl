@@ -4,14 +4,14 @@ MPSL
 MathPresso's Shading Language with JIT Engine for C++.
 
   * [Official Repository (kobalicek/mpsl)](https://github.com/kobalicek/mpsl)
-  * [Official Blog (asmbits)] (https://asmbits.blogspot.com/ncr)
+  * [Official Blog (asmbits)](https://asmbits.blogspot.com/ncr)
   * [Official Chat (gitter)](https://gitter.im/kobalicek/mpsl)
   * [Permissive ZLIB license](./LICENSE.md)
 
 Important
 ---------
 
-MPSL requires asmjit:next branch unless it's already merged with asmjit:master.
+MPSL requires asmjit:next-wip branch unless it's already merged with asmjit:master.
 
 
 Disclaimer
