@@ -8,17 +8,23 @@ MathPresso's Shading Language with JIT Engine for C++.
   * [Official Chat (gitter)](https://gitter.im/kobalicek/mpsl)
   * [Permissive ZLIB license](./LICENSE.md)
 
-Important
----------
-
-MPSL requires asmjit:next-wip branch unless it's already merged with asmjit:master.
-
-
 Disclaimer
 ----------
 
 This is a WORK-IN-PROGRESS that is far from being complete. MPSL is a challenging and difficult project and I work on it mostly when I'm tired of other projects. Contact me if you found MPSL interesting and want to collaborate on its development - people joining this project are very welcome.
 
+Building
+--------
+
+1. Clone MPSL's and AsmJit's next-wip branches:
+   ```
+   git clone -b next-wip https://github.com/kobalicek/mpsl.git
+   git clone -b next-wip https://github.com/asmjit/asmjit.git
+   ```
+2. `cd` into the mpsl directory.
+3. Run `cmake .` and then `make`.
+
+Now you are ready to try a test: `g++ test/mp_tutorial.cpp -L. -lmpsl`.
 
 Project Status
 --------------
@@ -42,7 +48,7 @@ Introduction
 
 MPSL is a lightweight shader-like programming language written in C++. Its name is based on a sister project called [MathPresso](https://github.com/kobalicek/mathpresso), which provided the basic idea and some building blocks. MPSL has been designed to be a safe programming language that can access CPU's SIMD capabilities through a shader-like programs compiled at runtime. The language is statically typed and allows to use up to 256-bit wide variables that map directly to CPU's SIMD registers (SSE, AVX, NEON, ...).
 
-MPSL has been designed to be lightweight and embeddable - it doesn't depend on huge libraries like LLVM, it only uses a very lightweight library called [AsmJit](https://github.com/kobalicek/asmjit) as a JIT backend. It implements its own abstract syntax tree (AST) and intermediate representation (IR) of the input program, and then uses an IRToAsm translator to convert IR to machine code.
+MPSL has been designed to be lightweight and embeddable - it doesn't depend on huge libraries like LLVM, it only uses a very lightweight library called [AsmJit](https://github.com/asmjit/asmjit) as a JIT backend. It implements its own abstract syntax tree (AST) and intermediate representation (IR) of the input program, and then uses an IRToAsm translator to convert IR to machine code.
 
 Check out a working [mp_tutorial.cpp](./test/mp_tutorial.cpp) to see how MPSL APIs are designed and how MPSL engine is embedded and used within an application.
 
@@ -358,11 +364,6 @@ int main(int argc, char* argv[]) {
 ```
 
 More documentation will come in the future.
-
-Dependencies
-------------
-
-  * AsmJit - 1.0 or later.
 
 Support
 -------
