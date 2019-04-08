@@ -16,13 +16,14 @@ This is a WORK-IN-PROGRESS that is far from being complete. MPSL is a challengin
 Building
 --------
 
-1. Clone MPSL's and AsmJit's next-wip branches:
+1. Create a building directory: `mkdir mpsl`.
+2. Clone MPSL's and AsmJit's next-wip branches:
    ```
    git clone -b next-wip https://github.com/kobalicek/mpsl.git
    git clone -b next-wip https://github.com/asmjit/asmjit.git
    ```
-2. `cd` into the mpsl directory.
-3. Run `cmake .` and then `make`.
+3. `cd` into the mpsl directory.
+4. Run `cmake .` and then `make`.
 
 Now you are ready to try a test: `g++ test/mp_tutorial.cpp -L. -lmpsl`.
 
